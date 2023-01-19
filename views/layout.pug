@@ -1,0 +1,15 @@
+block variables 
+doctype html
+html 
+	head 
+		meta(charset='utf-8')
+		title #{title} | Lab 2
+		style 
+			include ../assets/style.css
+	body 
+		header#header
+			include header
+		main#main
+			block main-contents 
+	footer.banner
+		p.wrapper &copy; Copyright Shavin Singh, 2023

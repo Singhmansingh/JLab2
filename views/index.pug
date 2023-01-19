@@ -1,0 +1,45 @@
+extends layout 
+block main-contents 
+    section.wrapper
+        div#hero.spaced
+    section
+        div.banner
+            h2 Shop by Category 
+        div#category-list.spaced
+            each cat in categories 
+                include category.pug
+    section 
+        div.banner
+            h2 Top Sellers
+        div#shop.wrapper.spaced
+            aside#filters
+                h3 Search
+                ul.menu 
+                    li.menu__item 
+                            div.menu__item_search
+                                form#form
+                                    input(placeholder="Search...").form__search
+                                    div
+                                        input(type="checkbox",id="allowOos",checked="true").form__checkbox
+                                        label(for="allowOos").form__checkbox In Stock
+                                    input(type="submit",value="Submit").form__submit
+
+                h3 Categories
+                ul.menu 
+                    li.menu__item 
+                        button Decor
+                    li.menu__item 
+                        button Grocery
+                    li.menu__item 
+                        button Hardware
+                    li.menu__item 
+                        button Health
+                    li.menu__item 
+                        button Sports
+                    li.menu__item 
+                        button Technology 
+                    
+            div#item-list
+                block items
+                    each itemData in storeItems
+                        include item.pug

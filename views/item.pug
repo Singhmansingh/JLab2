@@ -1,0 +1,18 @@
+article.item
+    img(src=itemData.src).item__img
+    h4.item__title #{itemData.title} 
+    div.item__content
+        p.item__content_price $#{itemData.cost}
+        div.rating
+            span.rating__stars
+                - for (var i = 0; i < 5; i++)
+                    if i < itemData.rating/2
+                        span &starf;
+                    else 
+                        span &star;
+            span.rating__count  (#{itemData.ratingCount})
+        if itemData.stock > 0
+            p.item__content_stock #{itemData.stock}  in stock 
+        else 
+            p.item__content_stock.oos Out of Stock
+        //- button.item__content_buy Add to Cart

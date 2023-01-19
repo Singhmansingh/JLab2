@@ -1,0 +1,19 @@
+{
+  "name": "js-lab2-shavinsingh",
+  "version": "1.0.0",
+  "description": "Lab 2, E-Commerce using Node.js, Express and Pug",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
